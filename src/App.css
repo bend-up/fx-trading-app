@@ -3,3 +3,8 @@
   width: 100%;
   position: absolute;
 }
+
+.LoaderContainer {
+  transform: scale(0.3);
+  width: 340px;
+}

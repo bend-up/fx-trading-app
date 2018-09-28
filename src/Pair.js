@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Pair.css';
 import { PairBuy } from './PairBuy';
 import { PairSell } from './PairSell';
-import { ArrowUp, ArrowDown } from './Icons';
+import { ArrowUp, ArrowDown, Empty } from './Icons';
 import { priceTrend } from './PriceTrend';
 
 class Pair extends Component {
@@ -27,6 +27,8 @@ class Pair extends Component {
       return <ArrowUp />;
     } else if (raising === priceTrend.falling) {
       return <ArrowDown />;
+    } else {
+      return <Empty />;
     }
   }
 }

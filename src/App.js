@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import ReactEventSource from 'react-eventsource';
 import { Pair } from './Pair.js';
-import { priceTrend, getPriceTrend } from './PriceTrend';
+import { getPriceTrend } from './PriceTrend';
+import { Loader } from './Icons';
 
 const displayedPairs = [
   'USD CHF',
@@ -31,7 +32,11 @@ class App extends Component {
 
                 return this.renderEvent(pair, receivedEvent, raising);
               } else {
-                return <div key={index}>Loading...</div>;
+                return (
+                  <div className="LoaderContainer">
+                    <Loader key={index} />
+                  </div>
+                );
               }
             });
             return <div className="PairContainer">{pairComponents}</div>;
