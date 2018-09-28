@@ -1,0 +1,42 @@
+.PairSell {
+  color: #b30000;
+  background-color: #dddde5;
+  border: 2px #bbb solid;
+  border-radius: 5% 80% 80% 5%;
+  width: 160px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.PairSell:hover {
+  color: #ffffff;
+  background-color: #ff1a1a;
+  border: 2px #66ccff solid;
+}
+
+.PairSellAmountPart2 {
+  font-size: 2rem;
+  margin-top: auto;
+}
+
+.PairSellAmountPart3 {
+  margin-bottom: auto;
+}
+
+.PairSellTitle {
+  margin-right: auto;
+}
+
+.PairSellAmount {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+

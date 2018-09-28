@@ -1,0 +1,42 @@
+.PairBuy {
+  color: #556b2f;
+  background-color: #dddde5;
+  border: 2px #bbb solid;
+  border-radius: 80% 5% 5% 80%;
+  width: 160px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.PairBuy:hover {
+  color: #ffffff;
+  background-color: #4ef84e;
+  border: 2px #66ccff solid;
+}
+
+.PairBuyAmountPart2 {
+  font-size: 2rem;
+  margin-top: auto;
+}
+
+.PairBuyAmountPart3 {
+  margin-bottom: auto;
+}
+
+.PairBuyTitle {
+  margin-left: auto;
+}
+
+.PairBuyAmount {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+
