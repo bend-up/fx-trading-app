@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ReactEventSource from 'react-eventsource';
+import { Pair } from './Pair.js';
 
 const displayedPairs = ["USD CHF","GBP USD","GBP CHF","EUR SEK","USD JPY","EUR JPY"];
 
@@ -11,7 +12,7 @@ class App extends Component {
       <div className="App">
       <ReactEventSource url="http://localhost:8080/events">
       { events => {
-        const pairComponents = displayedPairs.map( pair => {
+        const pairComponents = displayedPairs.map( (pair, index) => {
 
           if (events && events.length > 0) {
             const receivedEvent = events.slice()
@@ -21,10 +22,10 @@ class App extends Component {
 
             return (this.renderEvent(pair, receivedEvent));
           } else {
-            return <div>Loading...</div>
+            return <div key={index}>Loading...</div>
           }
         });
-        return <div>{pairComponents}</div>
+        return <div className="PairContainer">{pairComponents}</div>
       }
     }
     </ReactEventSource>
@@ -33,10 +34,8 @@ class App extends Component {
 }
 
   renderEvent = (pair, event) => {
-    const buy = event ? event.buy : '-';
-    const sell = event ? event.sell : '-';
     return (
-      <div key={pair}>{pair}: buy: {buy}, sell: {sell}</div>
+      <Pair event={event} pair={pair} key={pair}/>
     );
   }
 }
