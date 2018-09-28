@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Pair.css';
 import { PairBuy } from './PairBuy';
 import { PairSell } from './PairSell';
+import { ArrowUp, ArrowDown } from './Icons';
 
 class Pair extends Component {
   render() {
@@ -14,6 +15,7 @@ class Pair extends Component {
         <header className="PairTitle">{pair}</header>
         <div className="PairContent">
           <PairSell pair={pair} sell={sell} />
+          <ArrowDown />
           <PairBuy pair={pair} buy={buy} />
         </div>
       </div>

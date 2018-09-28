@@ -15,17 +15,20 @@
   background-color: #555;
   text-align: center;
   color: #e1e1e1;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
 
 .PairContainer {
   display: flex;
   flex-wrap: wrap;
-  font-family: "Andale Mono", Courier, monospace;
+  font-family: 'Andale Mono', Courier, monospace;
 }
 
 .PairContent {
   display: flex;
   margin: 0.6rem;
+}
+
+.PairPriceIndicator {
 }
